@@ -4,6 +4,52 @@ layout: default
 
 <div class="home">
 
-   This is the home page.
+   <!-- Intro -->
+   <div class="section intro">
+      <div class="container">
+         <div class="user-gist">
+            <div class="icon-symbol"></div>
+            <h3 class="fullname">Siddharth Arun</h3>
+            <p class="designation">Digital Product Designer</p>
+         </div>
+         <div class="user-blurb">
+            <p class="currently">
+               Currently hand crafting design <br />
+               for digital products - exclusively for <br />
+               founders and startups. Also speak <br />
+               HTML, CSS & Ruby. Hungry 80% <br />
+               of times. But 100% foolish.
+            </p>
+            <p class="previously"><strong>Previously / Clients</strong>Ghost, Streamup, Socialblood, Care At Hand, TouristEye, Twenty19</p>
+         </div>
+      </div>
+   </div>
+
+   <!-- Featured Work -->
+   <div class="section work">
+      <div class="container">
+         <ul class="featured-work">
+         {% for work in site.works %}
+            <li>
+               <div class="thumb">
+                  <img src="{{ work.thumb }}" />
+               </div>
+               <div class="meta">
+                  <h4 class="title">{{ work.title }}</h4>
+                  <p class="description">{{ work.description }}</p>
+                  <span class="links">{{ work.type }} - {{ work.link }}</span>
+               </div>
+            </li>
+         {% endfor %}
+         </ul>
+      </div>
+   </div>
+
+   <!-- Profile -->
+   <div class="section profile">
+      <div class="container">
+         Profile comes here.
+      </div>
+   </div>
 
 </div>
