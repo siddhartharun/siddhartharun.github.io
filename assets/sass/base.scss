@@ -15,6 +15,7 @@ body {
    width: 960px;
    margin: 0 auto;
    position: relative;
+   overflow: hidden;
 }
 
 .section {
@@ -148,3 +149,29 @@ ul.featured-work {
             line-height: 14px;
             color: #959595;
          }
+
+
+
+/* Profile */
+
+.bio {
+   width: 460px;
+   float: left;
+}
+
+   .bio > h4 {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 500;
+      padding: 0 0 40px 0;
+   }
+
+   .bio > p {
+      font-size: 16px;
+      line-height: 28px;
+      padding: 0 0 40px 0;
+   }
+
+      .bio > p:last-child {
+         padding: 0;
+      }
