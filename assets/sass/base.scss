@@ -15,7 +15,6 @@ body {
    width: 960px;
    margin: 0 auto;
    position: relative;
-   overflow: hidden;
 }
 
 .section {
@@ -153,6 +152,10 @@ ul.featured-work {
 
 
 /* Profile */
+
+.about-wrap {
+   overflow: hidden;
+}
 
 .bio {
    width: 460px;
