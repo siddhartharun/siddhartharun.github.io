@@ -11,7 +11,7 @@ body {
    position: relative;
    z-index: 1000;
    background: #FFFFFF;
-   margin-bottom: 600px;
+   margin-bottom: 748px;
 }
 
 
@@ -58,7 +58,7 @@ body {
    .user-gist .icon-symbol {
       width: 40px;
       height: 40px;
-      background: url('../images/icon-symbol.png') top left no-repeat;
+      background: url('../images/icon-symbol-blue.png') top left no-repeat;
       background-size: 40px 40px;
       position: absolute;
       top: 0;
@@ -182,13 +182,13 @@ ul.featured-work {
       font-size: 18px;
       line-height: 30px;
       font-weight: 500;
-      padding: 0 0 40px 0;
+      padding: 0 40px 40px 0;
    }
 
    .bio > p {
       font-size: 16px;
       line-height: 28px;
-      padding: 0 0 40px 0;
+      padding: 0 40px 40px 0;
    }
 
       .bio > p:last-child {
@@ -196,11 +196,15 @@ ul.featured-work {
       }
 
 .mentions {
-   width: 340px;
+   width: 298px;
    float: left;
-   background: #FBFBFB;
-   padding: 60px;
+   // background: #FBFBFB;
+   padding: 80px;
    margin: 10px 0 0 40px;
+   border-radius: 2px;
+   -webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+   border: 1px dotted #DDDDDD;
 }
 
    .mentions h3 {
@@ -254,14 +258,117 @@ ul.featured-work {
 /* Footer */
 
 .footer {
-   position:fixed;
+   position: fixed;
    left: 0px;
    bottom: 0px;
    right: 0;
-   height: 600px;
-   background: #EFEFEF;
+   height: 748px;
+   background: #3274FF;
    background-attachment: fixed;
    z-index: 0;
+   color: #FFFFFF;
 }
 
    .footer .section { border-bottom: none; }
+
+   .footer .user-gist {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      text-align: center;
+   }
+
+      .footer .user-gist .icon-symbol {
+         width: 60px;
+         height: 60px;
+         background: url('../images/icon-symbol-white.png') top left no-repeat;
+         background-size: 60px 60px;
+         position: relative;
+         display: inline-block;
+      }
+
+      .footer .user-gist h3.fullname {
+         font-size: 18px;
+         line-height: 18px;
+         font-weight: 500;
+         color: #FFFFFF;
+         padding: 3px 0 2px 0;
+      }
+
+      .footer .user-gist p.designation {
+         font-size: 16px;
+         line-height: 16px;
+         font-family: 400;
+         color: rgba(255, 255, 255, 0.80);
+      }
+
+   .lets-chat {
+      width: 1px;
+      height: 120px;
+      background: rgba(255, 255, 255, 0.40);
+      margin: 20px auto;
+      position: relative;
+   }
+
+      .lets-chat::before {
+         content: "Have a project? Let’s chat";
+         position: absolute;
+         top: 35px;
+         left: -60px;
+         width: 120px;
+         text-align: center;
+         background: #3274FF;
+         padding: 10px 0;
+         color: rgba(255, 255, 255, 0.40);
+      }
+
+   .contact {
+      margin: 0;
+      text-align: center;
+   }
+
+      .contact .email {
+         font-size: 48px;
+         line-height: 48px;
+         font-weight: 500;
+         color: #FFF;
+         display: block;
+         text-decoration: underline;
+      }
+
+      .contact .availability {
+         font-size: 16px;
+         line-height: 20px;
+         display: block;
+         padding: 20px 0 0 0;
+         color: rgba(255, 255, 255, 0.60);
+      }
+
+   .footer .colophon .container {
+      border-top: 1px solid rgba(255, 255, 255, 0.20);
+      padding: 30px 0;
+      overflow: hidden;
+   }
+
+      .colophon .copyright {
+         float: left;
+         color: rgba(255, 255, 255, 0.75);
+      }
+
+      .colophon ul.social-links {
+         float: right;
+         overflow: hidden;
+      }
+
+         .colophon ul.social-links li {
+            float: left;
+            margin-left: 20px;
+         }
+
+            .colophon ul.social-links li a {
+               color: rgba(255, 255, 255, 0.75);
+               &:hover {
+                  color: rgba(255, 255, 255, 1.0);
+                  text-decoration: underline;
+               }
+            }
