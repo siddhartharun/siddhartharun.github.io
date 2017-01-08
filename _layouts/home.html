@@ -37,7 +37,11 @@ layout: default
                <div class="meta">
                   <h4 class="title">{{ work.title }}</h4>
                   <p class="description">{{ work.description }}</p>
-                  <span class="links">{{ work.type }} &mdash; {{ work.link }}</span>
+                  {% if work.has_link == false %}
+                     <span class="links">{{ work.type }} &mdash; {{ work.link }}</span>
+                  {% else %}
+                     <span class="links">{{ work.type }} &mdash; <a href="http://{{ work.link }}" target="_blank">{{ work.link }}</a></span>
+                  {% endif %}
                </div>
             </li>
          {% endfor %}

@@ -109,7 +109,7 @@ body {
 /* Featured Work */
 
 ul.featured-work {
-   margin: 0;
+   margin: 0 0 -60px 0;
    padding: 0;
    overflow: hidden;
 }
@@ -121,7 +121,6 @@ ul.featured-work {
    }
 
       ul.featured-work li:nth-child(2n+2) { margin: 0 0 60px 0; }
-      ul.featured-work li:nth-last-child(2) { margin: 0 40px 0 0; }
       ul.featured-work li:last-child { margin: 0; }
 
       ul.featured-work li .thumb,
@@ -157,6 +156,14 @@ ul.featured-work {
             line-height: 14px;
             color: #959595;
          }
+
+            ul.featured-work li .meta span.links > a {
+               color: inherit;
+               text-decoration: none;
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
 
 
 
