@@ -7,6 +7,14 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.home {
+   position: relative;
+   z-index: 1000;
+   background: #FFFFFF;
+   margin-bottom: 600px;
+}
+
+
 
 
 /* Layouts */
@@ -35,6 +43,7 @@ body {
 
       .section.work .container::before { content: "Featured Work"; }
       .section.profile .container::before { content: "Profile"; }
+      .section.profile { border-bottom: none; }
 
 
 
@@ -178,3 +187,74 @@ ul.featured-work {
       .bio > p:last-child {
          padding: 0;
       }
+
+.mentions {
+   width: 340px;
+   float: left;
+   background: #FBFBFB;
+   padding: 60px;
+   margin: 10px 0 0 40px;
+}
+
+   .mentions h3 {
+      font-size: 14px;
+      line-height: 14px;
+      color: #757575;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: center;
+      padding-bottom: 40px;
+   }
+
+   ul.highlights {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px dotted #DDDDDD;
+   }
+
+      ul.highlights li {
+         font-size: 16px;
+         line-height: 24px;
+         color: #757575;
+         position: relative;
+      }
+
+         ul.highlights li .annotation {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #AAAAAA;
+            text-align: right;
+         }
+
+   ul.showcase {
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+   }
+
+      ul.showcase li {
+         font-size: 14px;
+         line-height: 22px;
+         color: #757575;
+      }
+
+
+
+
+/* Footer */
+
+.footer {
+   position:fixed;
+   left: 0px;
+   bottom: 0px;
+   right: 0;
+   height: 600px;
+   background: #EFEFEF;
+   background-attachment: fixed;
+   z-index: 0;
+}
+
+   .footer .section { border-bottom: none; }
