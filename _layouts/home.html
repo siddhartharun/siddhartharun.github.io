@@ -31,9 +31,17 @@ layout: default
          <ul class="featured-work">
          {% for work in site.works %}
             <li>
-               <div class="thumb">
-                  <img src="{{ work.thumb }}" />
-               </div>
+               {% if work.has_link == false %}
+                  <div class="thumb">
+                     <img src="{{ work.thumb }}" />
+                  </div>
+               {% else %}
+                  <div class="thumb">
+                     <a href="http://{{ work.link }}" target="_blank" class="thumb-link">
+                        <img src="{{ work.thumb }}" />
+                     </a>
+                  </div>
+               {% endif %}
                <div class="meta">
                   <h4 class="title">{{ work.title }}</h4>
                   <p class="description">{{ work.description }}</p>

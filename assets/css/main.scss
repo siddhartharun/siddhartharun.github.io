@@ -3,9 +3,8 @@
 ---
 @charset "utf-8";
 
-$bg-color: #CCCCCC;
-
 // Import partials from the `minima` theme.
+@import "animate";
 @import "reset";
 @import "fonts";
 @import "base";

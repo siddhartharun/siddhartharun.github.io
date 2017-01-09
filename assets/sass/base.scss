@@ -1,8 +1,7 @@
 body {
    font-family: "Graphik", "Helvetica Neue", Helvetica, sans-serif;
 	line-height: 1;
-	color: #555555;
-	background: #FFFFFF;
+	background: $body-bg;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -10,8 +9,8 @@ body {
 .home {
    position: relative;
    z-index: 1000;
-   background: #FFFFFF;
-   margin-bottom: 748px;
+   background: $body-bg;
+   margin-bottom: 752px;
 }
 
 
@@ -27,18 +26,18 @@ body {
 
 .section {
    padding: 150px 0;
-   border-bottom: 1px solid #E8E8E8;
+   border-bottom: 1px solid $border-solid;
 }
 
    .section .container::before {
       font-size: 16px;
       line-height: 16px;
-      background: #FFFFFF;
+      background: $body-bg;
       position: absolute;
       top: -158px;
       left: -16px;
       padding: 0 16px;
-      color: #C3C3C3;
+      color: $section-header-text;
    }
 
       .section.work .container::before { content: "Featured Work"; }
@@ -69,15 +68,15 @@ body {
       font-size: 18px;
       line-height: 18px;
       font-weight: 500;
-      color: #252525;
+      color: $primary-text;
       padding: 3px 0 2px 0;
    }
 
    .user-gist p.designation {
       font-size: 16px;
       line-height: 16px;
-      font-family: 400;
-      color: #959595;
+      font-weight: 400;
+      color: $secondary-text;
    }
 
 .user-blurb {
@@ -88,14 +87,14 @@ body {
    .user-blurb .currently {
       font-size: 42px;
       line-height: 56px;
-      color: #252525;
+      color: $primary-text;
       padding-bottom: 40px;
    }
 
    .user-blurb .previously {
       font-size: 14px;
       line-height: 14px;
-      color: #757575;
+      color: $secondary-text;
    }
 
       .user-blurb .previously strong {
@@ -124,11 +123,19 @@ ul.featured-work {
       ul.featured-work li:last-child { margin: 0; }
 
       ul.featured-work li .thumb,
-      ul.featured-work li .thumb > img {
+      ul.featured-work li .thumb img,
+      ul.featured-work li .thumb-link,
+      ul.featured-work li .thumb .thumb-link img {
          width: 460px;
          height: 320px;
-         background: #EFEFEF;
+         position: relative;
+         transition: all .3s ease-in-out;
+         z-index: 0;
       }
+
+         ul.featured-work li .thumb-link:hover {
+            opacity: 0.5;
+         }
 
       ul.featured-work li .meta {
          padding: 40px 0 0 0;
@@ -138,7 +145,7 @@ ul.featured-work {
             font-size: 18px;
             line-height: 18px;
             font-weight: 500;
-            color: #252525;
+            color: $primary-text;
             padding: 0 0 8px 0;
          }
 
@@ -146,7 +153,7 @@ ul.featured-work {
             font-size: 16px;
             line-height: 20px;
             font-weight: 400;
-            color: #555555;
+            color: $secondary-text;
             padding: 0 50px 25px 0;
          }
 
@@ -154,7 +161,7 @@ ul.featured-work {
             display: block;
             font-size: 14px;
             line-height: 14px;
-            color: #959595;
+            color: $tertiary-text;
          }
 
             ul.featured-work li .meta span.links > a {
@@ -183,12 +190,14 @@ ul.featured-work {
       line-height: 30px;
       font-weight: 500;
       padding: 0 40px 40px 0;
+      color: $primary-text;
    }
 
    .bio > p {
       font-size: 16px;
       line-height: 28px;
       padding: 0 40px 40px 0;
+      color: $primary-text;
    }
 
       .bio > p:last-child {
@@ -198,19 +207,18 @@ ul.featured-work {
 .mentions {
    width: 298px;
    float: left;
-   // background: #FBFBFB;
+   background: $panel-bg;
    padding: 80px;
    margin: 10px 0 0 40px;
    border-radius: 2px;
    -webkit-border-radius: 2px;
    -moz-border-radius: 2px;
-   border: 1px dotted #DDDDDD;
 }
 
    .mentions h3 {
       font-size: 14px;
       line-height: 14px;
-      color: #757575;
+      color: $primary-text;
       text-transform: uppercase;
       font-weight: 600;
       text-align: center;
@@ -220,13 +228,13 @@ ul.featured-work {
    ul.highlights {
       margin-bottom: 40px;
       padding-bottom: 40px;
-      border-bottom: 1px dotted #DDDDDD;
+      border-bottom: 1px dotted $border-dotted;
    }
 
       ul.highlights li {
          font-size: 16px;
          line-height: 24px;
-         color: #757575;
+         color: $secondary-text;
          position: relative;
       }
 
@@ -234,7 +242,7 @@ ul.featured-work {
             position: absolute;
             top: 0;
             right: 0;
-            color: #AAAAAA;
+            color: $tertiary-text;
             text-align: right;
          }
 
@@ -253,8 +261,6 @@ ul.featured-work {
       }
 
 
-
-
 /* Footer */
 
 .footer {
@@ -262,11 +268,10 @@ ul.featured-work {
    left: 0px;
    bottom: 0px;
    right: 0;
-   height: 748px;
-   background: #3274FF;
+   height: 752px;
+   background: $primary-color;
    background-attachment: fixed;
    z-index: 0;
-   color: #FFFFFF;
 }
 
    .footer .section { border-bottom: none; }
@@ -291,21 +296,21 @@ ul.featured-work {
          font-size: 18px;
          line-height: 18px;
          font-weight: 500;
-         color: #FFFFFF;
-         padding: 3px 0 2px 0;
+         color: $primary-text-inverted;
+         padding: 8px 0 4px 0;
       }
 
       .footer .user-gist p.designation {
          font-size: 16px;
          line-height: 16px;
-         font-family: 400;
-         color: rgba(255, 255, 255, 0.80);
+         font-weight: 400;
+         color: scale-color($primary-text-inverted, $alpha: -25%);
       }
 
    .lets-chat {
       width: 1px;
       height: 120px;
-      background: rgba(255, 255, 255, 0.40);
+      background: scale-color($primary-text-inverted, $alpha: -60%);
       margin: 20px auto;
       position: relative;
    }
@@ -317,9 +322,9 @@ ul.featured-work {
          left: -60px;
          width: 120px;
          text-align: center;
-         background: #3274FF;
+         background: $primary-color;
          padding: 10px 0;
-         color: rgba(255, 255, 255, 0.40);
+         color: scale-color($primary-text-inverted, $alpha: -60%);
       }
 
    .contact {
@@ -331,9 +336,13 @@ ul.featured-work {
          font-size: 48px;
          line-height: 48px;
          font-weight: 500;
-         color: #FFF;
-         display: block;
+         color: $primary-text-inverted;
+         display: inline-block;
          text-decoration: underline;
+         transition: all .2s ease-in-out;
+         &:hover {
+            transform: scale(1.03);
+         }
       }
 
       .contact .availability {
@@ -341,18 +350,18 @@ ul.featured-work {
          line-height: 20px;
          display: block;
          padding: 20px 0 0 0;
-         color: rgba(255, 255, 255, 0.60);
+         color: scale-color($primary-text-inverted, $alpha: -25%);
       }
 
    .footer .colophon .container {
-      border-top: 1px solid rgba(255, 255, 255, 0.20);
+      border-top: 1px solid scale-color($primary-text-inverted, $alpha: -80%);
       padding: 30px 0;
       overflow: hidden;
    }
 
       .colophon .copyright {
          float: left;
-         color: rgba(255, 255, 255, 0.75);
+         color: scale-color($primary-text-inverted, $alpha: -25%);
       }
 
       .colophon ul.social-links {
@@ -366,9 +375,9 @@ ul.featured-work {
          }
 
             .colophon ul.social-links li a {
-               color: rgba(255, 255, 255, 0.75);
+               color: scale-color($primary-text-inverted, $alpha: -25%);
                &:hover {
-                  color: rgba(255, 255, 255, 1.0);
+                  color: scale-color($primary-text-inverted, $alpha: 0%);
                   text-decoration: underline;
                }
             }
