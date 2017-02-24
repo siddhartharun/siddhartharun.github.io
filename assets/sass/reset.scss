@@ -15,6 +15,11 @@ $primary-text-inverted: #FFFFFF;
 $border-solid: #E8E8E8;
 $border-dotted: #DDDDDD;
 
+@mixin border-r-circle($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
 
 
 /* Reset
