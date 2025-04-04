@@ -1,3 +1,40 @@
+body {
+	font-family: "Redaction", serif;
+	font-feature-settings: "calt" off;
+	font-size: 15px;
+  font-style: normal;
+	line-height: 100%;
+	background: #FFFFFF;
+  color: #000000;
+	-webkit-font-smoothing: antialiased;
+}
+
 .current {
   color: green;
+}
+
+main {
+  width: 520px;
+  margin: 100px 0 100px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+p { line-height: 1.5; }
+
+a {
+  color: #000000;
+  text-decoration: none;
+  &:hover { font-style: italic; }
+}
+
+.masthead {
+  width: 22px;
+  height: 22px;
+  background: url("../images/avatar.jpeg") no-repeat center center;
+  background-size: cover;
+  &:hover {
+    filter: grayscale(100%);
+  }
 }
